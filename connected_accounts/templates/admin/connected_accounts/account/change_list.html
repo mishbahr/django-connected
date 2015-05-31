@@ -1,0 +1,30 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_urls %}
+{% load firstof from future %}
+{% block title %}{% firstof opts.app_config.verbose_name opts.app_label|title %} | {{ site_title|default:_('Django site admin') }} {% endblock %}
+{% block content_title %}<h1>{% firstof opts.app_config.verbose_name opts.app_label|title %}</h1>{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=cl.opts.app_label %}">{% firstof opts.app_config.verbose_name app_label|title|escape %}</a>
+&rsaquo; {{ cl.opts.verbose_name_plural|capfirst }}
+</div>
+{% endblock %}
+{% endif %}
+
+{% block object-tools %}
+  {% if has_add_permission %}
+    <ul class="object-tools">
+      {% block object-tools-items %}
+        <li>
+          {% url cl.opts|admin_urlname:'add' as add_url %}
+          <a href="{% add_preserved_filters add_url is_popup %}" class="addlink">
+            {% blocktrans with cl.opts.verbose_name as name %}Connect {{ name }}{% endblocktrans %}
+          </a>
+        </li>
+      {% endblock %}
+    </ul>
+  {% endif %}
+{% endblock %}

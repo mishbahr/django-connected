@@ -1,0 +1,3 @@
+{% load i18n admin_static %}
+<img class="avatar thumbnail" src="{% if avatar_url %}{{ avatar_url }}{% else %}{% static 'img/connected_accounts/icon-user-default.jpg' %}{% endif %}" alt="" />
+

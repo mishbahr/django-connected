@@ -1,0 +1,16 @@
+{% load i18n admin_static %}{% spaceless %}
+<span class="account-widget" data-ajaxurl="{{ ajax_url }}">
+    <a href="{{ lookup_url }}" class="related-lookup" id="lookup_id_{{ lookup_name }}" title="{% trans 'Lookup' %}"
+       onclick="return showRelatedObjectLookupPopup(this);">
+        <img class="thumbnail"
+             src="{% if related_obj %}{{ related_obj.get_avatar_url }}{% else %}{% static 'img/connected_accounts/icon-user-default.jpg' %}{% endif %}">
+        <span class="description">{% if related_obj %}{{ related_obj.get_provider.to_str }} &mdash; {{ related_obj }}{% else %}{% trans 'Choose an account' %}{% endif %}</span>
+    </a>
+    <img data-description="{% trans 'Choose an account' %}"
+         data-icon="{% static 'img/connected_accounts/icon-user-default.jpg' %}"
+         class="clear" src="{% static 'img/connected_accounts/icon_deletelink.png' %}" alt="{% trans 'Clear' %}"
+         title="{% trans 'Clear' %}"{% if not related_obj %} style="display: none;"{% endif %} />
+    <br/>
+    {{ hidden_input }}
+</span>
+{% endspaceless %}

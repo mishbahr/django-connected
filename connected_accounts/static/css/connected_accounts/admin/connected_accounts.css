@@ -1,0 +1,36 @@
+.change-list .column-avatar {
+	width: 48px;
+}
+
+.change-list .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.change-form .field-avatar img {
+    width: 152px;
+    height: 152px;;
+}
+
+.change-form .form-row {
+    word-wrap: break-word;
+    width: 760px;
+}
+
+.account-widget .thumbnail {
+    width: 48px;
+    height: 48px;
+}
+
+.account-widget .description {
+    color: #333;
+    font-weight: bold;
+}
+
+.account-widget .clear {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    padding-left: 5px;
+}
