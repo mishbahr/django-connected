@@ -189,3 +189,10 @@ Admin Preview
   :target: http://mishbahr.github.io/django-connected/images/django_connected_05.png
   :width: 768px
   :align: center
+
+
+Packages using ``django-connected``
+-----------------------------------
+
+* https://github.com/mishbahr/djangocms-twitter2 — The easiest way to display tweets for your ``django-cms`` powered site, using the latest Twitter 1.1 API. It's a great option for embedding tweets on your site without third-party widgets.
+* ...
