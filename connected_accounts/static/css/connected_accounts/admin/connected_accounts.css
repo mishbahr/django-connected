@@ -28,9 +28,15 @@
     font-weight: bold;
 }
 
+.account-widget .lookup img {
+    width: 18px;
+    height: 18px;
+}
+
 .account-widget .clear {
     cursor: pointer;
     width: 16px;
     height: 16px;
     padding-left: 5px;
 }
+
