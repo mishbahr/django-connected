@@ -195,4 +195,4 @@ Packages using ``django-connected``
 -----------------------------------
 
 * https://github.com/mishbahr/djangocms-twitter2 — The easiest way to display tweets for your ``django-cms`` powered site, using the latest Twitter 1.1 API. It's a great option for embedding tweets on your site without third-party widgets.
-* ...
+* https://github.com/mishbahr/djangocms-instagram — A simple but versatile Instagram plugin for your django-cms powered sites.
