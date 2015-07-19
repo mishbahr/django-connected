@@ -4,6 +4,7 @@ from .google import GoogleProvider
 from .instagram import InstagramProvider
 from .mailchimp import MailChimpProvider
 from .twitter import TwitterProvider
+from .disqus import DisqusProvider
 
 
 __all__ = (
@@ -13,4 +14,5 @@ __all__ = (
     'InstagramProvider',
     'MailChimpProvider',
     'TwitterProvider',
+    'DisqusProvider',
 )

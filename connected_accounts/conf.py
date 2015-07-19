@@ -31,5 +31,9 @@ class ConnectedAccountsAppConf(AppConf):
     MAILCHIMP_CONSUMER_KEY = None
     MAILCHIMP_CONSUMER_SECRET = None
 
+    DISQUS_CONSUMER_KEY = None
+    DISQUS_CONSUMER_SECRET = None
+    DISQUS_SCOPE = ['read', 'write', ]
+
     class Meta:
         prefix = 'connected_accounts'

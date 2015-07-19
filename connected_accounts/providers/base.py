@@ -53,6 +53,8 @@ class BaseOAuthProvider(object):
     consumer_key = ''
     consumer_secret = ''
     scope = []
+    scope_separator = ' '
+
 
     def __init__(self, token=''):
         self.token = token
@@ -173,7 +175,7 @@ class OAuthProvider(BaseOAuthProvider):
 
         scope = self.get_scope(request)
         if scope:
-            args['scope'] = ' '.join(self.get_scope(request))
+            args['scope'] = self.scope_separator.join(self.get_scope(request))
 
         return args
 
@@ -291,7 +293,7 @@ class OAuth2Provider(BaseOAuthProvider):
 
         scope = self.get_scope(request)
         if scope:
-            args['scope'] = ' '.join(self.get_scope(request))
+            args['scope'] = self.scope_separator.join(self.get_scope(request))
 
         state = self.get_application_state(request, callback)
         if state is not None:
