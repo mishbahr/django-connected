@@ -74,6 +74,7 @@ Supported Providers
   :align: center
 
 * Bitly (OAuth2)
+* Disqus (OAuth2)
 * Facebook (OAuth2)
 * Google (OAuth2)
 * Instagram (OAuth2)
