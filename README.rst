@@ -93,6 +93,21 @@ Use a callback URL of the form::
 
     http://example.com/admin/connected_accounts/account/callback/<provider_name>/
 
+
+Disqus
+=======
+
+Register your OAuth2 app here: http://disqus.com/api/applications/ ::
+
+    CONNECTED_ACCOUNTS_DISQUS_CONSUMER_KEY = '<disqus_client_id>'
+    CONNECTED_ACCOUNTS_DISQUS_CONSUMER_SECRET = '<disqus_client_secret>'
+
+By default, ``read`` and ``write`` scope is enabled ::
+
+    CONNECTED_ACCOUNTS_DISQUS_SCOPE = ['read', 'write', ]
+
+The available permissions for the scope value are ``read``, ``write``, ``email``, and ``admin``.
+
 Facebook
 ========
 
@@ -144,6 +159,7 @@ Register your OAuth app here: https://instagram.com/developer/clients/register/ 
 
     CONNECTED_ACCOUNTS_INSTAGRAM_CONSUMER_KEY = '<instagram_client_id>'
     CONNECTED_ACCOUNTS_INSTAGRAM_CONSUMER_SECRET = '<instagram_client_secret>'
+
 
 Usage
 -----
