@@ -2,7 +2,7 @@
   $(document).ready(function() {
     $('.account-widget').each(function() {
       var that = $(this),
-        hidden_input = that.find('.vAccountRawIdWidget'),
+        hiddenInput = that.find('.vAccountRawIdWidget'),
         thumbnail = that.find('.thumbnail'),
         description = that.find('.description'),
         clearBtn = that.find('.clear');
@@ -10,7 +10,8 @@
       clearBtn.on('click', function() {
         var el = $(this);
         el.hide();
-        hidden_input.val('');
+        hiddenInput.val('');
+        hiddenInput.trigger('change');
         thumbnail.attr('src', el.data('icon'));
         description.html(el.data('description'));
       });
