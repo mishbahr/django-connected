@@ -30,8 +30,8 @@ class InstagramProvider(OAuth2Provider):
     name = _('Instagram')
     account_class = InstagramAccount
 
-    access_token_url = 'https://instagram.com/oauth/access_token'
-    authorization_url = 'https://instagram.com/oauth/authorize'
+    access_token_url = 'https://api.instagram.com/oauth/access_token'
+    authorization_url = 'https://api.instagram.com/oauth/authorize'
     profile_url = 'https://api.instagram.com/v1/users/self'
 
     consumer_key = settings.CONNECTED_ACCOUNTS_INSTAGRAM_CONSUMER_KEY
