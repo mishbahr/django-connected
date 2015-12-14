@@ -2,9 +2,6 @@
 django-connected
 =============================
 
-.. image:: http://img.shields.io/travis/mishbahr/django-connected.svg?style=flat-square
-    :target: https://travis-ci.org/mishbahr/django-connected/
-
 .. image:: http://img.shields.io/pypi/v/django-connected.svg?style=flat-square
     :target: https://pypi.python.org/pypi/django-connected/
     :alt: Latest Version
@@ -16,9 +13,6 @@ django-connected
 .. image:: http://img.shields.io/pypi/l/django-connected.svg?style=flat-square
     :target: https://pypi.python.org/pypi/django-connected/
     :alt: License
-
-.. image:: http://img.shields.io/coveralls/mishbahr/django-connected.svg?style=flat-square
-  :target: https://coveralls.io/r/mishbahr/django-connected?branch=master
 
 
 Quickstart
