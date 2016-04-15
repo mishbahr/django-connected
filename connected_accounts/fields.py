@@ -1,7 +1,5 @@
 from django.db.models import ForeignKey
 
-from .models import Account
-
 
 class AccountField(ForeignKey):
 
@@ -11,7 +9,11 @@ class AccountField(ForeignKey):
 
         self.provider = provider
         kwargs.update({'limit_choices_to': {'provider': self.provider}})
-        super(AccountField, self).__init__(Account, **kwargs)
+
+        # We hard-code the `to` argument for ForeignKey.__init__
+        # since a AccountField can only be a ForeignKey to a Account
+        kwargs['to'] = 'connected_accounts.Account'
+        super(AccountField, self).__init__(**kwargs)
 
     def deconstruct(self):
         name, path, args, kwargs = super(AccountField, self).deconstruct()
