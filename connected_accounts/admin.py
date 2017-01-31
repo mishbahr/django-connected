@@ -73,7 +73,7 @@ class AccountAdmin(admin.ModelAdmin):
         Add the export view to urls.
         """
         urls = super(AccountAdmin, self).get_urls()
-        from django.conf.urls import patterns, url
+        from django.conf.urls import url
 
         def wrap(view):
             def wrapper(*args, **kwargs):
@@ -82,14 +82,13 @@ class AccountAdmin(admin.ModelAdmin):
 
         info = self.opts.app_label, self.opts.model_name
 
-        extra_urls = patterns(
-            '',
+        extra_urls = [
             url(r'^login/(?P<provider>(\w|-)+)/$',
                 wrap(OAuthRedirect.as_view()), name='%s_%s_login' % info),
             url(r'^callback/(?P<provider>(\w|-)+)/$',
                 wrap(OAuthCallback.as_view()), name='%s_%s_callback' % info),
             url(r'^(.+)/json/$', wrap(self.json_view), name='%s_%s_json' % info),
-        )
+        ]
         return extra_urls + urls
 
     def add_view(self, request, form_url='', extra_context=None):

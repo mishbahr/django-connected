@@ -1,6 +1,5 @@
 {% extends "admin/change_form.html" %}
 {% load i18n admin_urls %}
-{% load firstof from future %}
 {% block bodyclass %}{{ block.super }}{% if add %} add-form{% endif %}{% endblock %}
 {% block title %}{% if add %}{% trans 'Connect' %} {{ opts.verbose_name }}{% else %}{{ original.get_provider_display}} &mdash; {{ original|truncatewords:"18" }}{% endif %} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 {% block content_title %}<h1>{% if add %}{% trans 'Choose a Provider' %}{% else %}{{ original.get_provider_display}} &mdash; {{ original|truncatewords:"18" }}{% endif %}</h1>{% endblock %}
