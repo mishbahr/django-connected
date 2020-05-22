@@ -1,10 +1,10 @@
-from __future__ import unicode_literals
+
 
 import logging
 
 from django.contrib import messages
 from django.contrib.admin.templatetags.admin_urls import add_preserved_filters
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import Http404
 from django.shortcuts import redirect
 from django.utils.encoding import force_text

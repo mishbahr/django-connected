@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
+
 
 from django.conf import settings
 from django.db import migrations, models
@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('oauth_token_secret', models.TextField(help_text='"oauth_token_secret" (OAuth1) or refresh token (OAuth2)', null=True, verbose_name='OAuth Token Secret', blank=True)),
                 ('extra_data', JSONField(verbose_name='Extra data', editable=False)),
                 ('expires_at', models.DateTimeField(null=True, verbose_name='Expires at', blank=True)),
-                ('user', models.ForeignKey(editable=False, to=settings.AUTH_USER_MODEL, verbose_name='User')),
+                ('user', models.ForeignKey(on_delete=models.deletion.CASCADE, editable=False, to=settings.AUTH_USER_MODEL, verbose_name='User')),
             ],
             options={
                 'ordering': ('-last_login',),

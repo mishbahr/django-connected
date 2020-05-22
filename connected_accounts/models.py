@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
+
 
 import json
 import logging
@@ -20,7 +20,7 @@ logger = logging.getLogger('connected_accounts')
 @python_2_unicode_compatible
 class Account(models.Model):
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL, verbose_name=_('User'), editable=False)
+        settings.AUTH_USER_MODEL, verbose_name=_('User'), editable=False, on_delete=models.CASCADE)
     provider = models.CharField(
         verbose_name=_('Provider'), max_length=50,
         choices=providers.as_choices())
